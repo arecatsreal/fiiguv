@@ -4,7 +4,7 @@ TERMCMD="alacritty -e"
 
 TMPFILE=$(mktemp --suffix=fiiguv)
 xsel -c > $TMPFILE
-$EDITOR $TMPFILE
+$TERMCMD $EDITOR $TMPFILE
 xclip -selection clipbord $TMPFILE
 
 rm $TMPFILE
